@@ -67,8 +67,8 @@
         scene.add(box);   // シーンに追加
         
         var geometry = new THREE.ConeGeometry( 5, 20, 32 );
-//         const material = new THREE.MeshBasicMaterial( {color: 0xFF0000} );
-        var cone = new THREE.Mesh( geometry, mat );
+        var material = new THREE.MeshBasicMaterial( {color: 0xFF0000} );
+        var cone = new THREE.Mesh( geometry, material );
         cone.position.set(0, 0, 5);
         scene.add( cone );
 
