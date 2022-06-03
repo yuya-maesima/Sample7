@@ -57,12 +57,6 @@
         var bump = textureLoader.load("stone-bump.jpg");
         mat.bumpMap = bump;
         mat.bumpscale = 0.2;
-        
-        var planeGeometry = new THREE.PlaneGeometry(5, 5, 5, 5);
-        var planeMaterial = new THREE.MeshBasicMaterial(color: 0x734e30});
-        var plane = new THREE.planeMaterial);
-        plane.rotaion.set(-Math.PI/2, 0, 0);
-        plane.position.set(0, 0, 0);
 
         // 箱を作成
         var geometry = new THREE.BoxGeometry(1, 1, 1);
@@ -71,6 +65,12 @@
         var box = new THREE.Mesh(geometry, mat);
         box.position.set(0,0,0); //位置を指定
         scene.add(box);   // シーンに追加
+        
+        const geometry = new THREE.ConeGeometry( 5, 20, 32 );
+//         const material = new THREE.MeshBasicMaterial( {color: 0xFF0000} );
+        const cone = new THREE.Mesh( geometry, mat);
+        cone.position.set(0, 0, 5);
+        scene.add( cone );
 
         update();
 
