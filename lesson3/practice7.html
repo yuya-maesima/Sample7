@@ -71,6 +71,12 @@
         var cone = new THREE.Mesh(geometry, mat);
         cone.position.set(2, 0, 0);
         scene.add(cone);
+        
+        var geometry = new THREE.TorusGeometry( 1, 1, 16, 100 );
+        var material = new THREE.MeshBasicMaterial( { color: 0xFF0000 } );
+        var torus = new THREE.Mesh( geometry, mat );
+        torus.position.set(-2, 0, 0);
+        scene.add( torus );
 
         update();
 
